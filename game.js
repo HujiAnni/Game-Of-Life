@@ -31,7 +31,7 @@ function createCells(){
 
 function random(){
     for (let i = 1; i <= gridSize; i++) {
-        if (Math.floor(Math.random()*13) === 0) {
+        if (Math.floor(Math.random()*7) === 0) {
             toggle(i);        
         }
     }
@@ -40,9 +40,12 @@ function random(){
 
 addEventListener('keydown', () => {
     condition = !condition;
-    setInterval(()=>{
-        let block = document.getElementById("target");
-        block.remove();
+    setTimeout(()=>{
+        let blocks = document.querySelectorAll("div");
+        blocks.forEach((block)=> {
+            block.remove();
+        });
+        condition = true;
     }, 2000);
 });
 
