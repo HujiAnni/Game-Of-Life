@@ -43,11 +43,18 @@ addEventListener('keydown', () => {
     setTimeout(()=>{
         let blocks = document.querySelectorAll("div");
         blocks.forEach((block)=> {
-            block.remove();
+            block.classList.remove("on");
         });
         condition = true;
     }, 2000);
 });
+
+
+addEventListener('click', (e) => {
+    let cell = document.getElementById(e.target.id);
+    cell.classList.toggle("on");
+});
+
 
 function game(){
     setTimeout(() => {
