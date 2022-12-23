@@ -1,0 +1,28 @@
+body {
+    /* background-color: #FBF2CF; */
+    background-color: #000; 
+
+}
+.on{
+    background: #A1C298;
+}                
+.content{
+    display: grid;
+    margin: auto;
+    justify-content: center;
+}
+div{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    /* border-color: #FBF2CF; */
+    border-color: #C6EBC5;
+}
+
+button {
+    background-color: #FA7070;
+    color:#FBF2CF;
+    border: none;
+    padding: 5px;
+    border-radius: 5%;
+}
