@@ -3,27 +3,29 @@ let position = 1;
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const w = Math.floor(width/10);
-const h = Math.floor(height/10);
+const w = Math.floor(width/20);
+const h = Math.floor(height/20);
 
 const gridSize = w * h;
 
 let content = document.querySelector(".content");
-content.style.gridTemplateColumns = `repeat(${w},9.75px)`
-content.style.gridTemplateRows = `repeat(${h},9.55px)`
+content.style.gridTemplateColumns = `repeat(${w},19.75px)`
+content.style.gridTemplateRows = `repeat(${h},19px)`
 
 
 let condition = true;
 
 function createCells(){
+    // let block = document.createElement("main");
+    // block.classList.add("cotent");
+    // block.setAttribute("id","target");
+    // document.getElementById("dynamic").appendChild(block);
     for (let i = 1; i<=gridSize; i++){
         var div = document.createElement("div");
         div.id = i;
         // div.innerText = i;
         document.getElementById("target").appendChild(div);
-        let block = document.createElement("main");
-        block.classList.add("cotent");
-        block.setAttribute("id","target");
+        
     }
 }
 
@@ -46,7 +48,7 @@ addEventListener('keydown', () => {
 
 function game(){
     setTimeout(() => {
-        if (!condition) return;
+        if (!condition ) return;
         
         for (let i = 1; i <= gridSize; i++) {
             let numNeighbor = 0;
@@ -167,14 +169,28 @@ function game(){
                         numNeighbor = numNeighbor + add;
                     }
             }
-            if (!element.classList.contains('on') && (numNeighbor === 3)) {
-                element.classList.add('on');
-            } else if (element.classList.contains('on') && (numNeighbor === 3 || numNeighbor === 2)) {
-                element.classList.add('on');
+            if (element.classList.contains('on') == false) {
+                if (numNeighbor === 3) {
+                    element.classList.toggle('on');
+                }
+            } else {
+                if (numNeighbor != 3 && numNeighbor != 2) {
+                    element.classList.toggle('on');
+                }
             }
-            else {
-                element.classList.remove('on');
-            }
+            // if (!element.classList.contains('on') && (numNeighbor === 3)) {
+            //     element.classList.toggle('on');
+            // } else if (element.classList.contains('on') && (numNeighbor === 3)) {
+            //     // element.classList.add('on');
+            // }
+            // else {
+            //     if (element.classList.contains('on')) {
+            //         element.classList.toggle('on');
+            //     } else {
+
+            //     }
+            //     // element.classList.remove('on');
+            // }
            game();
         }
     }, 1000);
