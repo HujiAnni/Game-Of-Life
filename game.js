@@ -178,19 +178,7 @@ function game(){
                     element.classList.toggle('on');
                 }
             }
-            // if (!element.classList.contains('on') && (numNeighbor === 3)) {
-            //     element.classList.toggle('on');
-            // } else if (element.classList.contains('on') && (numNeighbor === 3)) {
-            //     // element.classList.add('on');
-            // }
-            // else {
-            //     if (element.classList.contains('on')) {
-            //         element.classList.toggle('on');
-            //     } else {
 
-            //     }
-            //     // element.classList.remove('on');
-            // }
            game();
         }
     }, 1000);
