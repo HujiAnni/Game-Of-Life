@@ -23,7 +23,7 @@ The play can start with creating the cells (which will show up grids based on th
 
 ## Demo
 
-<img src="" alt="Demo GIF" style="height: 500px">
+<img src="./Demo GIF.gif" alt="Demo GIF" style="height: 500px">
 
 <br>
 
