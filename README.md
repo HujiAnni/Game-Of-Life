@@ -1,6 +1,6 @@
 # Game Of Life
 
-<img src="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Animated_Mwss.gif" alt="Intro Image">
+<img src="./Animated_gameoflife.gif" alt="Intro Image">
 
 This Christmas, join me to admire the magic of life by this Game of Life!
 
