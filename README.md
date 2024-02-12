@@ -38,4 +38,3 @@ When the page is loaded, move your mouse around the screen and you'll see the ey
 
 - [ ] Create explanation for the game to access via "?" button
 - [ ] Adjust to make the web runs more smoothly
-      <br>
